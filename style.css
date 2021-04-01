@@ -4,12 +4,9 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-}
-.wrapper {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
-  padding: 8px;
 }
 .matrix {
   width: 500px;
@@ -45,10 +42,10 @@
   font-size: 18px;
   width: 226px;
 }
-.task-wrapper {
+.add-task__description {
   display: flex;
 }
-.task-button {
+.task__button {
   background: none;
   border: 0px;
   color: #888;
@@ -57,12 +54,12 @@
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-.task-button:hover {
+.task__button:hover {
   color: #3a3a3a;
 }
 /* Heading */
 .article__title,
-#add-task__title {
+.add-task__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +84,7 @@
   color: #333;
 }
 /* New Task */
-#add-task__title {
+.add-task__title {
   display: block;
   margin: 0 0 20px;
 }
@@ -114,7 +111,7 @@
 .delete-img:hover {
   transform: rotate(0);
 }
-.add-button:hover {
+.add-task__button:hover {
   color: #0fc57c;
 }
 .delete-img:hover {
