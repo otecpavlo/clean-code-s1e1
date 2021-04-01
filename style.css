@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline:none;
+  outline: none;
 }
 .wrapper {
   background-color: #f8f8f8;
@@ -24,7 +24,7 @@
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
   .matrix { 
    text-align: center;
@@ -129,14 +129,14 @@
 }
 /* Edit Task */
 .task-item .input-text {
-  display:none
+  display: none
 }
 
 .edit-mode .input-text {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .edit-mode .task-hidden {
-  display:none;
+  display: none;
 }
