@@ -86,7 +86,6 @@
 .input-text:focus {
   color: #333;
 }
-
 /* New Task */
 #add-task__title {
   display: block;
@@ -124,19 +123,17 @@
   color: #cf2323;
 }
 .description {
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 /* Edit Task */
 .task-item .input-text {
-  display: none
+  display: none;
 }
-
 .edit-mode .input-text {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
-
 .edit-mode .task-hidden {
   display: none;
 }
