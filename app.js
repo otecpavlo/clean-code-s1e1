@@ -127,7 +127,7 @@ var taskCompleted=function(){
     var listItem=this.parentNode;
     this.parentNode.classList.remove("incomplete-tasks__item");
     this.parentNode.classList.add("completed-tasks__item");
-    this.nextSibling.classList.add("description");
+    this.nextSibling.classList.add("completed-tasks__label");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -142,7 +142,7 @@ var taskIncomplete=function(){
     var listItem=this.parentNode;
     this.parentNode.classList.add("incomplete-tasks__item");
     this.parentNode.classList.remove("completed-tasks__item");
-    this.nextSibling.classList.remove("description");
+    this.nextSibling.classList.remove("completed-tasks__label");
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }

@@ -5,12 +5,11 @@
   box-sizing: border-box;
   outline: none;
   background-color: #f8f8f8;
-  color: #333;
   font-family: Lato, sans-serif;
 }
 .matrix {
   width: 500px;
-  margin: 0 auto;
+  margin: 8px auto 0 auto;
   display: block;
   text-align: right;
 }
@@ -32,6 +31,7 @@
   display: block;
   width: 500px;
   margin: 0 auto 0;
+  color: #333;
 }
 .task {
   width: 56%;
@@ -41,6 +41,9 @@
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+}
+.add-task {
+  margin: 16px 0 16px 0;
 }
 .add-task__description {
   display: flex;
@@ -120,7 +123,7 @@
 .delete-img:hover {
   color: #cf2323;
 }
-.description {
+.completed-tasks__label {
   text-decoration: line-through;
   color: #888;
 }
