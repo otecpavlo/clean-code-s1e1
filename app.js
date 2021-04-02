@@ -10,8 +10,8 @@
 
 var taskInput=document.getElementsByTagName("input")[0];//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var incompleteTaskHolder=document.querySelector(".incomplete-tasks__list");//ul of #incompleteTasks
+var completedTasksHolder=document.querySelector(".completed-tasks__list");//completed-tasks
 
 
 //New task list item
@@ -38,8 +38,8 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="task input-text";
-    listItem.className="task-item";
+    editInput.className="task input-task";
+    listItem.className="incomplete-tasks__item";
     checkBox.className="task-check";
     deleteButtonImg.className="delete-img";
 
@@ -65,6 +65,7 @@ var createNewTaskElement=function(taskString){
 
 var addTask=function(){
     console.log("Add Task...");
+    event.preventDefault()
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
@@ -74,7 +75,6 @@ var addTask=function(){
     bindTaskEvents(listItem, taskCompleted);
 
     taskInput.value="";
-    event.preventDefault()
 }
 
 //Edit an existing task.
@@ -125,6 +125,8 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+    this.parentNode.classList.remove("incomplete-tasks__item");
+    this.parentNode.classList.add("completed-tasks__item");
     this.nextSibling.classList.add("description");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
@@ -138,6 +140,8 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
+    this.parentNode.classList.add("incomplete-tasks__item");
+    this.parentNode.classList.remove("completed-tasks__item");
     this.nextSibling.classList.remove("description");
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
